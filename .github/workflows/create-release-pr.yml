@@ -13,7 +13,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: git-pr-release
-        uses: bakunyo/git-pr-release-action@v1.3
+        uses: bakunyo/git-pr-release-action@master
         env:
           GIT_PR_RELEASE_BRANCH_STAGING: dev
           GIT_PR_RELEASE_BRANCH_PRODUCTION: main
