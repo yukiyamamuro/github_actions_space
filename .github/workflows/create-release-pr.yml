@@ -1,4 +1,4 @@
-name: Create PR from dev to master
+name: Create PR from dev to main
 on:
   push:
     branches:
@@ -9,10 +9,10 @@ jobs:
     name: git-pr-release
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@main
+      - uses: actions/checkout@master
         with:
           fetch-depth: 0
       - name: git-pr-release
-        uses: bakunyo/git-pr-release-action@main
+        uses: bakunyo/git-pr-release-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GIT_CREDENTIALS }}
