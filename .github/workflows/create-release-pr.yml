@@ -17,4 +17,4 @@ jobs:
         env:
           GIT_PR_RELEASE_BRANCH_STAGING: dev
           GIT_PR_RELEASE_BRANCH_PRODUCTION: main
-          GITHUB_TOKEN: ${{ secrets.PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
