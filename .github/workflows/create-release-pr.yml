@@ -1,0 +1,20 @@
+name: Create PR from dev to main
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  git-pr-release:
+    name: git-pr-release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: git-pr-release
+        uses: bakunyo/git-pr-release-action@v1.3
+        env:
+          GIT_PR_RELEASE_BRANCH_STAGING: dev
+          GIT_PR_RELEASE_BRANCH_PRODUCTION: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
