@@ -16,4 +16,8 @@ jobs:
           echo ${{ secrets.TEST_JSON }} | base64 -d
       - name: json test run
         run: |
-          cat test.json
+          content=`cat ./test.json`
+          content="${content//'%'/'%25'}"
+          content="${content//$'\n'/'%0A'}"
+          content="${content//$'\r'/'%0D'}"
+          echo "::set-output name=testJson::$content"
