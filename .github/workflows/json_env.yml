@@ -1,0 +1,19 @@
+name: Json Env Tests
+
+on: [push]
+
+jobs:
+  cypress-run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Create json file
+        run: |
+          echo ${{ secrets.TEST_JSON }} > test.json
+      - name: test run
+        run: |
+          echo ${{ secrets.TEST_JSON.test_env }}
+      - name: json test run
+        run: |
+          echo test.json
