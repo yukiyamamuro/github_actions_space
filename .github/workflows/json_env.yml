@@ -13,7 +13,7 @@ jobs:
           echo ${{ secrets.TEST_JSON }} > test.json
       - name: test run
         run: |
-          echo ${{ secrets.TEST_JSON.test_env }}
+          echo ${{ secrets.TEST_JSON }}
       - name: json test run
         run: |
           echo test.json
