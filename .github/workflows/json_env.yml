@@ -16,4 +16,4 @@ jobs:
           echo ${{ secrets.TEST_JSON }} | base64 -d
       - name: json test run
         run: |
-          echo test.json
+          cat test.json
