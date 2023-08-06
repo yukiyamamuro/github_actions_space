@@ -1,5 +1,21 @@
 # Changelog
 
+## [2.0.0](https://github.com/yukiyamamuro/github_actions_space/compare/v1.0.0...v2.0.0) (2023-08-06)
+
+
+### ⚠ BREAKING CHANGES
+
+* test breaking change
+
+### Features
+
+* test breaking change ([2b7dc08](https://github.com/yukiyamamuro/github_actions_space/commit/2b7dc085649c51b919b65786e12aa66802a1869c))
+
+
+### Miscellaneous
+
+* **README:** add description for release please ([#19](https://github.com/yukiyamamuro/github_actions_space/issues/19)) ([dc687fb](https://github.com/yukiyamamuro/github_actions_space/commit/dc687fb4a63d664278fc61e12230460050a05dbd))
+
 ## 1.0.0 (2023-08-06)
 
 
