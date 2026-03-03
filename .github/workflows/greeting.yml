@@ -18,5 +18,11 @@ jobs:
         id: response
         run: echo "message=こんばんは" >> "$GITHUB_OUTPUT"
 
-      - name: 結果を表示
-        run: echo "返答：${{ steps.response.outputs.message }}"
+      - name: 結果をファイルに書き出す
+        run: echo "${{ steps.response.outputs.message }}" > greeting_output.txt
+
+      - name: Artifactsにアップロード
+        uses: actions/upload-artifact@v4
+        with:
+          name: greeting-result
+          path: greeting_output.txt
