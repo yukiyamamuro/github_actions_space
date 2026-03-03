@@ -1,0 +1,22 @@
+name: Greeting Workflow
+on:
+  workflow_dispatch:
+    inputs:
+      greeting:
+        description: "あいさつを入力してください"
+        required: true
+        type: string
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: あいさつを受け取る
+        run: echo "入力されたあいさつ：${{ inputs.greeting }}"
+
+      - name: こんばんはを返す
+        id: response
+        run: echo "message=こんばんは" >> "$GITHUB_OUTPUT"
+
+      - name: 結果を表示
+        run: echo "返答：${{ steps.response.outputs.message }}"
